@@ -37,17 +37,66 @@ else:
     위 조건들(조건1,조건2,조건3)이 모두 거짓일 때 실행
 들여쓰기 중요! Tab 사용
 조건이 1개만 일경우 if, 조건의 참/거짓 판단시 if/else, 조건이 여러개일 경우 if / elif / else 사용
-⑦ for는 정해진 대상을 하나씩 반복할 때,
+⑦ for는 정해진 대상을 하나씩 반복할 때 사용,
+for를 쓰면 좋은 경우는 반복할 횟수가 정해져 있을 때/ 리스트. 문자열, range를 하나씩 처리할 때
 while은 조건이 참인 동안 계속 반복할 때 사용, 조건이 False가 되면 종료, 무한반복 주의
-(break 사용 반복문 즉시 종료/continue 현재 반복을 건너뛰고 다음 반복으로 넘어가게 함)
+사용자가 종료를 선택할 때까지 반복(break 사용 반복문 즉시 종료/continue 현재 반복을 건너뛰고 다음 반복으로 넘어가게 함)
 ⑧ 반환값은 함수가 계산한 결과를 함수 밖으로 돌려주는 값
 반환할 때는 return을 사용하면 결과를 변수에 저장하거나 다른 계산에 사용할 수 있다.
 (결과를 돌려주는 return과 비교해볼 명령어 print는 화면에만 결과를 출력하고 값을 돌려주지 않는다)
-⑨ 
+-반환값이 없고 단순히 연산결과만 화면에 출력된 경우
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(3, 5)
+print(result)
+8
+-반환값이 저장되어 다음 연산에 사용한 경우
+def add_return(a, b):
+    return a + b
+
+result = add_return(3, 5)
+print(result)
+8
+result = add_return(3, 5)
+total = result + 10
+
+print(total)
+18
+⑨ 함수는 python에서 자주 사용하는 코드에 이름을 붙여 저장해 둔 것
+def show_menu():
+    print("퀴즈 게임에 오신 것을 환영합니다!")
+    print("1. 퀴즈 시작")
+    print("2. 점수 보기")
+    print("3. 종료")
+매개변수는 함수에 값을 전달하기 위한 변수로 함수를 호출할 때 매개변수에 값을 넣는다.
+def say_hello(name):
+    print(name + "님, 안녕하세요!")
+say_hello("지민")
+실행하면, 지민님, 안녕하세요!
 ```
 ## 2. 클래스와 객체
 ```
+① 클래스 : 데이터와 기능을 하나로 묶어서, 프로그램을 더 체계적으로 만들기 위한 도구
+② 클래스 사용이유
+관련 있는 데이터와 기능을 하나로 묶기 위해서
+코드를 더 깔끔하게 정리하기 위해서
+같은 구조의 객체를 여러 개 쉽게 만들기 위해서
+유지보수를 쉽게 하기 위해서
 
+구성요소 	의미
+class Question:	Question 클래스 정의
+__init__()	객체가 만들어질 때 자동 실행
+self.text	객체가 가진 속성
+self.answer	객체가 가진 속성
+check_answer()	객체가 가진 메서드
+self	현재 객체 자기 자신
+class Question:
+    def __init__(self, text, answer):
+        self.text = text
+        self.answer = answer
+
+    def check_answer(self, user_answer):
+        return user_answer == self.answer
 ```
 
 ## 3. 파일 입출력
