@@ -106,8 +106,23 @@ class Question:
 불러오기 시: json.load()를 사용하여 파일 내용을 파이썬 객체로 복원.
 ```
 
-## 4. Git 기초
+## 4. Git 기초명령어 7종 1번 이상 사용하기
 ```
+git init 새 프로젝트 시작시 빈 저장소 만들기
+
+git add 파일명 또는 . GitHub에 저장할 파일 담기
+    git add quizgame.py
+
+git commit GitHub에 저장할 코드에 대한 설명 적어주기
+    git commit -m "quiz프로그램 test"
+
+git push 준비된 세이브 포인트를 GitHub로 저
+
+git pull 작업하는 동안 수시로 원격저장소에 업데이트된 최신 프로젝트를 내 컴퓨터로 저장
+
+git checkout main(브랜치명) main브랜치로 이동
+
+git clone원격저장소 전체를 내 컴퓨터에 저장하므로 내 컴퓨터에 새로운 펄더가 생김. 주로 프로젝트 처음시작시 사용
 
 ```
 
